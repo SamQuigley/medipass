@@ -1,0 +1,39 @@
+/*#var1 {*/
+/*    background-color:#30a5ff;*/
+/*    color:white;*/
+/*}*/
+
+/*#var2 {*/
+/*    background-color:#ffb53e;*/
+/*    color:white;*/
+/*}*/
+
+/*#var3 {*/
+/*    background-color:#1ebfae;*/
+/*    color:white;*/
+/*}*/
+
+/*#var4 {*/
+/*    background-color:#f9243f;*/
+/*    color:white;*/
+/*}*/
+
+#var1_indicator.h3 {
+    
+    color:#30a5ff;
+}
+
+#var2_indicator.h3 {
+    
+    color:#ffb53e;
+}
+
+#var3_indicator.h3 {
+   
+    color:#1ebfae;
+}
+
+#var4_indicator.h3 {
+    
+    color:#f9243f;
+}

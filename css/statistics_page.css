@@ -1,0 +1,62 @@
+#stats_home {
+    height:1100px;
+    background: url(../img/statistics_background.jpg) no-repeat center center;
+    background-size: cover;
+    
+}
+
+.statsContainer{
+    height:900px;
+    width:30%;
+    background: white;
+	border: 0 none;
+	border-radius: 20px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 80px;
+}
+
+
+
+
+#stats{
+    display:none;
+}
+
+#pie_Btn{
+    width:90%;
+}
+
+#lineGraph_Btn{
+    width:90%;
+}
+
+#resultMessage{
+    display:none;
+}
+
+#pie_control_panel{
+    display:none;
+}
+
+#lineGraph_control_panel{
+    display:none;
+}
+
+#line-chart{
+ display:none;
+ 
+}
+
+#pie-chart{
+    display:none;
+}
+
+#notation-PieChart{
+    
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+}
+

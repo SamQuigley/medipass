@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>MediPass - Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+
+
+
+    <link href="css/registration-page.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand topnav" id="medipass_logo" href="index.html"><img src="img/medipass_logo_sm.png" class="img-responsive" alt="MediPass Logo"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+
+
+        <!-- Registration form - START -->
+        <div id="body-background" class="container">
+            <div class="row">
+
+                
+                                
+                                <div class="col-lg-6 regCont" style="float:right;"> 
+                                <h2 >Sign in to MediPass</h2>
+                                <hr>
+                                <form role="form" id="rForm"> 
+                             
+                                <div class="form-group">
+                                <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" id = "email" name="email"  placeholder="E-mail Address..." required>
+                                             </div>
+                                                </div>
+                                <div class="form-group">
+                                <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" class="form-control" id = "password" name="password"  placeholder="Password..." required/>
+                                        
+                                </div>
+                                </div>
+                                <div id="error"></div>
+                                                 
+                                </form>
+                                    
+                                <input type="submit" onclick="processLogin()" value="login" class="btn btn-lg btn-info" >
+                              </div>
+          
+        </div>
+        <!-- Registration form - END -->
+    </div>
+    
+</body>
+
+</html>

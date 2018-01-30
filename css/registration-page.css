@@ -6,7 +6,7 @@ html{
     background-image:none;
 }
 
-#regCont{
+.regCont{
     background: white;
 	border: 0 none;
 	border-radius: 3px;
@@ -16,11 +16,19 @@ html{
     background: rgba(255, 255, 255, 0.9);
     margin-top: 100px;
 }
+@media screen and (min-width: 150px) {
+    body {
+        background-image: url("../img/Reg_Small_Bg.jpg");
+    }
+}
 
 @media screen and (min-width: 1200px) {
     body {
         background-image: url("../img/Reg_Bg.jpg");
     }
+}
+#medipass_logo{
+    margin-top:-12px;
 }
 
 

@@ -5904,6 +5904,7 @@ button.close {
   margin: 10px;
 }
 .modal-content {
+  color:black;
   position: relative;
   background-color: #fff;
   -webkit-background-clip: padding-box;

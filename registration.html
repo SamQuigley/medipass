@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>MediPass - Registration</title>
@@ -8,75 +9,173 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  
+    <script type="text/javascript" src="js/confirmPassword.js"></script>
+      <script type="text/javascript" src="js/registration.js"></script>
+    <script type="text/javascript" src="js/TandC.js"></script>
+
+
+    <link href="css/registration-page.css" rel="stylesheet">
     
-    <link href="css/registration-page.css" rel="stylesheet"> <!-- Custom Stylesheet -->
+    <!-- Custom Stylesheet -->
+
+
 </head>
+
 <body>
 
-<div class="container">
-
-
-
-<!-- Registration form - START -->
-<div class="container" >
-    <div class="row">
-        <form role="form">
-            <div class="col-lg-6" id="regCont" style="float:right;">
-                <h1>Registration</h1>
-                <hr>
-               
-                <div class="form-group">
-                    <label for="InputName">First Name</label>
-                    <div class="input-group">
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter First Name" required>
-                        
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="InputEmail">Surname</label>
-                    <div class="input-group">
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                        <input type="text" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Surname" required>
-                   </div>
-                </div>
-                <div class="form-group">
-                    <label for="InputEmail">Enter Email</label>
-                    <div class="input-group">
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                        <input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Enter Email" required>
-                    </div>
-                </div>
-                 <div class="form-group">
-                    <label for="InputEmail">Enter Password</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        <input type="password" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Enter Password" required>
-                    </div>
-                </div>
-                 <div class="form-group">
-                    <label for="InputEmail">Confirm Password</label>
-                    <div class="input-group">
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
-                        <input type="password" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Password" required>
-                        
-                    </div>
-                </div>
-                <br>
-                <p><input type="checkbox"  id="tnccheckbox" required/> I Accept the <u>Terms and Conditions</u></p>
-                
-                
-                <input type="submit" name="Register" id="Register" value="Register" class="btn btn-success btn-lg pull-right">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand topnav" id="medipass_logo" href="index.html"><img src="img/medipass_logo_sm.png" class="img-responsive" alt="MediPass Logo"></a>
             </div>
-        </form>
-        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="login.html">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="registration.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+
+
+        <!-- Registration form - START -->
+        <div id="body-background" class="container">
+            <div class="row">
+                
+                <form role="form"  id="rForm" onsubmit="return confirmPassword()">
+                      
+                    <div class="col-lg-6 regCont"  style="float:right;">
+                        <h1>Registration</h1>
+                        <hr>
+
+                        <div class="form-group">
+                            <label for="InputName">First Name</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" id="fname" name="firstname" placeholder="Enter First Name" required>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputSurnam">Surname</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" id="sname" name="surname" placeholder="Enter Surname" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail">Enter Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword">Enter Password</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword">Confirm Password</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-repeat"></span></span>
+                                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required>
+
+                            </div>
+
+                        </div>
+                        <div id="errorMsg"></div>
+                        <br>
+
+
+                        <p><input type="checkbox" required id="myCheck" /> I Accept the <u data-toggle="modal" data-target="#myModal"> Terms and Conditions</u></p>
+                         
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">
+                                            <center><b>Terms & Conditions</b></center>
+                                        </h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5><b>1. Introduction</b></h5>
+                                        <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of this website. These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed
+                                            to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.</p><br>
+                                        <h5><b>2. Intellectual Property Rights</b></h5>
+                                        <p>Other than the content you own, under these Terms, MediPass and/or its licensors own all the intellectual property rights and materials contained in this Website.<br><br> You are granted limited license only for
+                                            purposes of viewing the material contained on this Website.</p>
+                                        <h5><b>3. Restrictions</b></h5>
+                                        <p>You are specifically restricted from all of the following:
+                                            <ul>
+                                                <li>publishing any Website material in any other media;</li>
+                                                <li>selling, sublicensing and/or otherwise commercializing any Website material;</li>
+                                                <li>publicly performing and/or showing any Website material;</li>
+                                                <li>using this Website in any way that is or may be damaging to this Website;</li>
+                                                <li>using this Website in any way that impacts user access to this Website;</li>
+                                                <li>using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
+                                                <li>engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
+                                                <li>using this Website to engage in any advertising or marketing.</li>
+                                            </ul><br> Certain areas of this Website are restricted from being access by you and MediPass may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password
+                                            you may have for this Website are confidential and you must maintain confidentiality as well.
+                                        </p><br><br>
+                                        <h5><b>4. Your Content</b></h5>
+                                        <p>In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant MediPass a non-exclusive,
+                                            worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.<br><br>Your Content must be your own and must not be invading any third-party’s
+                                            rights. MediPass reserves the right to remove any of Your Content from this Website at any time without notice.
+                                        </p><br><br>
+                                        <h5><b>5. No warranties</b></h5>
+                                        <p>This Website is provided “as is,” with all faults, and MediPass express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on
+                                            this Website shall be interpreted as advising you.</p><br><br>
+                                        <h5><b>6. Limitation of liability</b></h5>
+                                        <p>In no event shall MediPass, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under
+                                            contract. MediPass, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <center>
+
+                                            <button type="button" class="btn btn-danger btn-lg" onclick="unCheck()" data-dismiss="modal">Decline</button>
+                                            <button type="button" class="btn btn-success btn-lg" onclick="check()" data-dismiss="modal">Accept Terms & Condidtions</button>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="submit" name="Register" id="Register" value="Register" class="btn btn-danger btn-lg text-center pull-right">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Registration form - END -->
     </div>
-</div>
-<!-- Registration form - END -->
-
-</div>
-
 </body>
+
 </html>

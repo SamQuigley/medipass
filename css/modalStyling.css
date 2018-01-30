@@ -1,0 +1,105 @@
+#addRecordModal .modal-content{
+    background-color: #cce9ff;
+    margin-top: 30%;
+    
+    box-shadow:0 0 15px white;
+    margin-top:200px;
+    border-bottom: solid 4px white;
+    border-top: solid 4px white;
+    border-radius: 5px;
+    
+}
+#addRecordModal .modal-content .modal-header{
+    background-color:#30A5FF;
+    color:white;
+    font-size:2em;
+    
+}
+#addRecordModal .modal-footer{
+    background-color:#30A5FF;
+}
+
+#addRecordBtn2{
+    background-color: rgb(138, 217, 25);
+    border-bottom-color: rgb(138, 217, 25);
+    color: white;
+    font-size: 1.8em;
+    border-radius: 5px;
+    margin-left: 32%;
+    margin-top: 20px;
+    padding: 6px 12px 6px 12px;
+}
+
+#addRecordModal label{
+    color:#777;
+}
+.modalHeader{
+    color:white;
+    font-size:30px;
+}
+
+
+#medicalRecModal .modal-dialog{
+    background-color:#cce9ff;
+    float: none;
+    margin-top:5%;
+    text-align:center;
+    top:15%;
+	outline: none;
+	border-top: solid 4px white;
+	border-bottom: solid 4px white;
+	border-radius:5px;
+	box-shadow:0 0 20px white;
+	padding:0;
+}
+#medicalRecModal .modal-header .h2{
+    margin-top:0;
+    color:red;
+}
+#medicalRecModal .modal-header{
+    text-align:center;
+}
+#medicalRecModal .modal-footer{
+    background-color:#30A5FF;
+}
+
+#myModal {
+    color:red;
+}
+
+#myModal .modal-header{
+    background-color:#30A5FF;
+    color:white;
+    font-size:30px;
+    
+}
+#myModal .modal-dialog{
+    margin-top:15%;
+    border-radius:0;
+}
+
+#myModal button[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius:0;
+  background-color:#30A5FF;
+}
+
+.btn-info{
+    background-color:#30A5FF;
+}
+
+.btn-info:hover  {
+    background-color: #2F8DD5;
+}
+
+.btn-info:active  {
+    background-color: red;
+}
+
+.btn-info:visited  {
+    background-color: #2F8DD5;
+}
+
